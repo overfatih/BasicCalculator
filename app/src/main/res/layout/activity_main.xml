@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/bolButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:onClick="bolAction"
+        android:text="/"
+        app:layout_constraintStart_toStartOf="@+id/cikarButon"
+        app:layout_constraintTop_toBottomOf="@+id/cikarButon" />
+
+    <Button
+        android:id="@+id/cikarButon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:onClick="cikarAction"
+        android:text="-"
+        app:layout_constraintEnd_toEndOf="@+id/number2EditText"
+        app:layout_constraintTop_toBottomOf="@+id/number2EditText" />
+
+    <Button
+        android:id="@+id/toplaButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="36dp"
+        android:onClick="toplaAction"
+        android:text="+"
+        app:layout_constraintEnd_toStartOf="@+id/cikarButon"
+        app:layout_constraintTop_toBottomOf="@+id/number2EditText" />
+
+    <Button
+        android:id="@+id/carpButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:onClick="carpAction"
+        android:text="x"
+        app:layout_constraintStart_toStartOf="@+id/toplaButton"
+        app:layout_constraintTop_toBottomOf="@+id/toplaButton" />
+
+    <EditText
+        android:id="@+id/number2EditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="13dp"
+        android:ems="10"
+        android:hint="number2"
+        android:inputType="text"
+        app:layout_constraintStart_toStartOf="@+id/number1EditText"
+        app:layout_constraintTop_toBottomOf="@+id/number1EditText" />
+
+    <EditText
+        android:id="@+id/number1EditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="90dp"
+        android:layout_marginTop="58dp"
+        android:ems="10"
+        android:hint="number1"
+        android:inputType="text"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/resultText"
+        android:layout_width="259dp"
+        android:layout_height="27dp"
+        android:layout_marginStart="57dp"
+        android:layout_marginTop="98dp"
+        android:text="Result"
+        android:textAlignment="center"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/carpButton" />
+
+    <TextView
+        android:id="@+id/validateView"
+        android:layout_width="0dp"
+        android:layout_height="27dp"
+        android:layout_marginTop="66dp"
+        android:text="TextView"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/resultText"
+        app:layout_constraintStart_toStartOf="@+id/resultText"
+        app:layout_constraintTop_toBottomOf="@+id/resultText" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

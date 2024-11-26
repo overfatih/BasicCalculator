@@ -7,29 +7,16 @@ import com.profplay.basiccalculatorwithkotlin.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         val view = binding.root
         setContentView(view)
-
-    }
-
-    fun toplaAction(view: View){
-       islem('+')
-    }
-    fun carpAction(view: View){
-        islem('x')
-    }
-
-    fun cikarAction(view: View){
-        islem('-')
-    }
-
-    fun bolAction(view: View){
-        islem('/')
-    }
+    }    
+    fun toplaAction(view: View) { islem('+') }
+    fun carpAction(view: View)  { islem('x') }
+    fun cikarAction(view: View) { islem('-') }
+    fun bolAction(view: View)   { islem('/') }
     fun islem(char: Char) {
         var valid: Array<Any> = validateNumber()
         var result: Double = 0.0
@@ -43,7 +30,6 @@ class MainActivity : AppCompatActivity() {
             binding.resultText.text=result.toString()
         }
     }
-
     fun validateNumber(): Array<Any> {
         var result :Array<Any> = arrayOf(1,1,false)
         var num1 = binding.number1EditText.text.toString().toIntOrNull()
@@ -56,7 +42,4 @@ class MainActivity : AppCompatActivity() {
         binding.validateView.text=result[2].toString()
         return result
     }
-
-
-
 }

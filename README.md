@@ -7,7 +7,7 @@ This app calculates among two given numbers
 - Performance enhanced.
 - New features added.
 
-## Version 1.2.0
+## Versiyon 1.2.0
 - Kod iyileştirmeleri yapıldı.
 - Performans artırıldı.
 - Yeni özellikler eklendi.
